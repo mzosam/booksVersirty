@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booksVersity</title>
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!--
+
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-user"></i>
+
+    -->
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        img{
+            border-radius: 5px;
+        }
+
+        html{
+            scroll-behavior: smooth;
+            cursor: pointer;
+        }
+        ::-webkit-scrollbar-track{
+            background-color: rgb(255, 255, 255);
+        }
+        ::-webkit-scrollbar{
+            width: 7px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: linear-gradient(rgb(255, 252, 252),rgb(1, 206, 45), rgb(255, 253, 253));
+        }
+        /*-----------------------------------------------------------------------*/
+        section{
+            width: 100%;
+            height: 100vh;
+            background-color: darkgray;
+        }
+
+        .nav{
+            width: 100%;
+            height: 10vh;
+            background-color: rgb(105, 137, 151);
+            position:sticky;
+            top: 0;
+            z-index: 1;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+        }
+        nav li{
+            list-style: none;
+            margin-right: 4rem;
+            margin-top: 1.5rem;
+            cursor: pointer;
+            font-family:sans-serif;
+            letter-spacing: 1px;
+        }
+        nav li a:hover{
+            color: #1a1818;
+            font-size: 1.2rem;
+        }
+        nav li a{
+            text-decoration: none;
+            color: darkgray;
+            transition: .5s;
+        }
+        .first{
+            background-color: darkgray;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .icons{
+            margin-right: 20px;
+        }
+        .logo{
+            margin-left: 20px;
+        }
+        .logo h1{
+            font-family: magneto;
+            color: #4e4646;
+            font-size: 17px;
+            cursor: none;
+        }
+        .first .icons i{
+            margin-left: 40px;
+            cursor: pointer;
+            transition: .3s;
+            color: #4e4646;
+        }
+        .first .icons i:hover{
+            color: rgb(105, 137, 151);
+            font-size: 20px;
+        }
+        .section-content{
+            position: relative;
+            text-align: center;
+            transform: translateY(140%);
+        }
+        .section-content h1{
+            font-size: 4rem;
+            font-family: harlow solid;
+        }
+        .section-content span{
+            color: rgb(105, 137, 151);
+            font-family: bahnschrift light;
+        }
+        .section-content p{
+            font-family: corbel;
+            color: rgb(70, 69, 69);
+        }
+        /*----------------------------------------------------------*/
+        .photography{
+            align-self: center;
+        }
+        .photography img{
+            width: 25rem;
+            height: 35rem;
+        }
+        .section-two{
+            display: flex;
+            justify-content: space-around;
+            background-color:rgb(248, 227, 199);
+        }
+        .second-section-content{
+            width: 55%;
+            height: auto;
+            text-align: center;
+            align-self: center;
+        }
+        .second-section-content p{
+            font-size: 1.3rem;
+            font-family: corbel;
+            color: rgb(87, 80, 80);
+        }
+        .second-section-content span{
+            color: rgb(105, 137, 151);
+        }
+        /*----------------------------------------------------------------*/
+        .third-section-poster{
+            width: 100%;
+            height: 70vh;
+            background-image: url(books/21.gif);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+       /* .third-section-poster img{
+            width: 100%;
+            height: 100%;
+            background-attachment: fixed;
+        }
+        */
+        /*-----------------------------------------------------------------*/
+        .added-section{
+            width: 100%;
+            height: 20vh;
+            background-color: darkgray;
+        }
+        /*----------------------------------------------------------------*/
+        .fouth-section-books{
+            background-color: rgb(248, 227, 199);
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .book{
+            width: 30%;
+            height: 40%;
+        }
+        .book img{
+            width: 100%;
+            height: 100%;
+        }
+        .one, .two, .three{
+            position: relative;
+            top: 2rem;
+        }
+        /*-----------------------------------------------------------------*/
+        footer{
+            width: 100%;
+            height: 90vh;
+            background-color: darkgray;
+        }
+        
+        #contacts .icons-2{
+           width: 40%;
+           height: 5vh;
+           display: flex;
+           justify-content: space-evenly;
+           margin-left: 30%;
+           margin-bottom: 10px;
+           cursor: pointer;
+        }
+        hr{
+            border-color: wheat;
+        }
+        
+        .icons-2,hr, small{
+            position: relative;
+            top: 25%;
+        }
+        small{
+            position: relative;
+            top: 29%;
+            left: 41%;
+            color:#4e4646;
+        }
+        small span{
+            color: rgb(89, 121, 134);
+            font-family: 'Courier New', Courier, monospace;
+        }
+        #contacts .icons-2 i{
+            transition: .3s;
+        }
+        #contacts .icons-2 i:hover{
+            transform: translateY(-10px);
+            color: white;
+            font-size: 22px;
+        }
+        table{
+            position: relative;
+            top: 50px;
+            width: 85%;
+            height: 50vh;
+            left: 15%;
+        }
+        table th{
+            text-align: left;
+            color: rgb(105, 137, 151);
+            font-family: Bahnschrift Light;
+        }
+        table td{
+            color: #4e4646;
+            transition: .30s;
+            font-family: Gabriola;
+        }
+        table td:hover{
+            border-left: 1px solid wheat;
+            text-align: center;
+            color: wheat;
+        }
+        td.number{
+            font-family: Bahnschrift Light;
+        }
+        td a{
+            text-decoration: none;
+            color: #4e4646;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="first nav">
+            <div class="logo">
+                <h1>BookVersity</h1>
+            </div>
+            <div class="icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+                <i class="fa-solid fa-user"></i>
+            </div>
+        </div>
+        <div class="second nav">
+            <nav>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about-us">About us</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#liabrary">Liabrary</a></li>
+            </nav>
+        </div>
+
+        <section>
+           
+            <div class="section-content">
+                <h1><span>Muscle</span> your mind</h1>
+                <p>Books university provides real knowledge <br><br>
+                • &nbsp; &nbsp;for real people&nbsp; &nbsp;•</p>
+            </div>
+        </section>
+    
+        <section class="section-two" id="about-us">
+            <div class="second-section-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aspernatur asperiores deleniti ea ad tempora accusamus doloribus nam, nesciunt porro, quidem sapiente neque aliquam modi iusto expedita nobis quia perferendis labore corporis reiciendis. <span>Explicabo eaque</span>, cum sapiente qui ab minus veniam impedit odio fuga quidem dolore ratione repellat obcaecati laboriosam omnis labore nisi iusto dolorem quo ea dicta quibusdam. Ea suscipit porro distinctio doloribus dolorum pariatur sequi facilis, nulla aperiam, culpa error fugit veniam rerum aut quidem. Iusto quia repellat reprehenderit in eligendi quos modi incidunt fugiat possimus placeat. <span>Explicabo eaque</span> ipsa suscipit rerum tempora at quo perferendis eos, nihil qui magnam culpa optio, ad est! Odio placeat explicabo aut labore sunt. Mollitia at <span>Explicabo eaque</span> unde perferendis, et vel eligendi est? Est ipsum, magni minima quasi.</p>
+            </div>
+    
+            <div class="photography">
+                <img src="books/2.jpg" alt="">
+            </div>
+        </section>
+        
+        <section class="third-section-poster">
+            <!--<img src="books/21.gif" alt=""> -->
+        </section>
+
+        <section class="added-section">
+
+        </section>
+
+        <section class="fouth-section-books" id="liabrary">
+            <div class="book one">
+                <img src="books/12.jpg" alt="">
+            </div>
+            <div class="book two">
+                <img src="books/17.gif" alt="">
+            </div>
+            <div class="book three">
+                <img src="books/5.jpg" alt="">
+            </div>
+            <div class="book four">
+                <img src="books/9.jpg" alt="">
+            </div>
+            <div class="book five">
+                <img src="books/15.jpg" alt="">
+            </div>
+            <div class="book six">
+                <img src="books/18.gif" alt="">
+            </div>
+        </section>
+    
+        <footer id="contacts">
+            <table>
+                <tr>
+                    <th>Quick links</th>
+                    <th>Location</th>
+                    <th>Address</th>
+                    <th>Contact info</th>
+                </tr>
+                <tr>
+                    <td><a href="#home">Home</a></td>
+                    <td>Durban Central</td>
+                    <td>West street 21</td>
+                    <td class="number">(+27) 66 525 9261</td>
+                </tr>
+                <tr>
+                    <td><a href="#about-us">About us</a></td>
+                    <td>Galleria Mall</td>
+                    <td>Manzimtoti 91</td>
+                    <td class="number">(021) 764 8732</td>
+                </tr>
+                <tr>
+                    <td><a href="#contacts">Contacts</a></td>
+                    <td>Durban liabrary</td>
+                    <td>Durban Central</td>
+                    <td class="number">(+27) 66 525 9261</td>
+                </tr>
+                <tr>
+                    <td><a href="#liabrary">Liabrary</a></td>
+                    <td>Sydenham hights</td>
+                    <td>111 Palmiet rd</td>
+                    <td class="number">(031) 33 525 9268</td>
+                </tr>
+            </table>
+            <div class="icons-2">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+            <hr>
+            <small>Created by EUC group-3, <span>Copyright reserved !</span></small>
+        </footer>
+    </div>
+    
+</body>
+</html>
